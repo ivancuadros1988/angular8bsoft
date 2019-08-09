@@ -1,0 +1,80 @@
+<div class="generic-container" >
+    
+    <div class="panel panel-default">
+        <div class="panel-heading" style="padding: 8px 15px;" align="center"><span style="font-size:20px"><p>Información de Deudas</p></span></div>
+        <div class="formcontainer">
+      <div class="panel panel-default">
+      <div class="formcontainer">
+        <form #ingServicioForm="ngForm"   (ngSubmit)="submit()">
+               <div class="form-group row ">
+              <div style="clear:both;margin-bottom:2px"></div>
+              <div class="col-xs-12 col-sm-2 col-md-2">
+                <!-- <input type="text" id="servicio.codigo" class="form-control input-sm" name="servicio.codigo" [(ngModel)]="serviciotmp.cliente.nombres" minlength="1" maxlength="10" placeholder="codigo"  readonly />-->
+                <input type="text" id="servicio.codigo" class="form-control input-sm" name="servicio.codigo" [(ngModel)]="servicio.codigo" minlength="1" maxlength="10" placeholder="codigo"  readonly /> 
+                
+              </div>
+              <div class="col-xs-12 col-sm-5 col-md-5">
+                <!-- <input type="text" id="servicio.estado" class="form-control input-sm" name="servicio.estado" [(ngModel)]="serviciotmp.producto.codigo" minlength="1" maxlength="200" placeholder="estado"  readonly /> -->
+                <input type="text" id="servicio.estado" class="form-control input-sm" name="servicio.estado" [(ngModel)]="servicio.estado" minlength="1" maxlength="200" placeholder="estado"  readonly />
+              </div>
+              <div class="col-xs-12 col-sm-5 col-md-5">
+                <input type="text" id="servicio.monto" class="form-control input-sm" name="servicio.monto" [(ngModel)]="servicio.monto" minlength="1" maxlength="200" placeholder="monto" required />
+                
+              </div>
+            </div>
+          <div class="row" >
+            <div class="col-xs-12 col-sm-12 col-md-12">
+              <div class="form-actions floatRight">
+                <button type="submit" class="btn btn-primary btn-sm" [disabled]="!ingServicioForm.form.valid">{{!servicio.indSave ? 'Add' : 'Update'}}</button>
+                
+              </div>
+              
+            </div>
+          </div>
+             <div style="clear:both"></div>
+        </form>
+        </div>
+      </div>
+          </div>
+      </div>
+    
+      <div class="panel panel-default">
+          <div class="panel-heading"><span style="font-size:14px; padding-left:10px">Información de la Deuda</span></div>
+          <div class="tablecontainer">
+              <table class="table table-hover" style="font-size:12px">
+                  <thead>
+                      <tr>
+                          <th>Nro Factura</th>
+                          <th>Cliente - Nombres</th>
+                          <th>Producto - Código </th>
+                          <th>Producto - Descrpción</th>
+                          <th>Monto</th>
+                          <th>Estado </th>
+                          <th width="20%"></th>
+                      </tr>
+                  </thead>
+                  <tbody>              
+                    <tr *ngFor="let p of servicios | paginate: { itemsPerPage: 2, currentPage: p } ">
+                    <!-- <tr *ngFor="let p of servicios"> -->
+                        <td>{{p.codigo}}</td>
+                        <td>{{p.cliente.nombres}}</td>
+                        <td>{{p.cliente.codigo}}</td>
+                        <td>{{p.producto.descripcion}}</td>
+                        <td>{{p.monto}}</td>
+                        <td> <p *ngIf="p.estado=='0'">PENDIENTE</p><p *ngIf="p.estado=='1'">PAGADO</p></td>
+                        <td>
+                        <button type="button" class="btn btn-success custom-width" (click)="update(p)" >Pagar</button>
+                        <!-- <button type="button" class="btn btn-warning custom-width" (click)="delete(p.codigo)" >Eliminar</button> -->
+                        <button type="button" class="btn btn-warning custom-width" (click)="reverse(p)" >Eliminar</button>
+                        </td>
+                    </tr>
+                  </tbody>
+              </table>
+              
+              <div><pagination-controls (pageChange)= "p = $event"></pagination-controls></div>
+              
+          </div>
+      </div>
+      
+      </div>
+    

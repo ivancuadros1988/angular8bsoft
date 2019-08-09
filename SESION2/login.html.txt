@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Web</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" >
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> 
+  <style>      body {color:#369;font-family: Arial,Helvetica,sans-serif;}    
+  body, #mainWrapper {
+	height: 100%;
+	background-color:rgb(245, 245, 245);
+}
+
+body, .form-control{
+	font-size:12px!important;
+}
+
+.floatRight{
+	float:right;
+	margin-right: 18px;
+}
+
+.has-error{
+	color:red;
+}
+
+.formcontainer{
+	background-color: #DAE8E8;
+	padding: 10px;
+}
+
+.tablecontainer{
+	padding-left: 20px;
+}
+
+.generic-container {
+  width:40%;
+  margin-left: 30%;
+  margin-top: 15%;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #EAE7E7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 0 30px black;
+}
+.form-group {
+    margin-bottom: 2px;
+}
+.custom-width {
+    width: 80px !important;
+}
+.panelregistro{
+    margin-bottom: 0px;
+    background-color: #fff;
+    border: 0px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.05);
+    box-shadow: 0 0px 0px rgba(0,0,0,.05);
+	background-color:transparent;
+}
+
+.panel {
+    margin-bottom: 8px;
+}
+
+.form-control {
+    height: 32px;
+    padding: 4px 8px;
+}
+
+.btn-default {
+    color: #fff;
+    background-color: #d1cdcd;
+    border-color: #ccc;
+}
+.btn-toolbar {
+    margin-bottom: 3px;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 6px 12px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #fff;
+    cursor: default;
+    background-color: #8f8e8e;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.nav-tabs {
+    border-bottom: 1px solid #8f8e8e;
+}
+	.process {
+		position: fixed;
+		top: 30%;
+		right: 0;
+		bottom: 0;
+		left: 30%;
+		z-index: 1050;
+		display:block;
+	}
+/*
+.btn {
+    padding: 4px 8px;
+}
+*/
+/*
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+/*
+}
+*/
+/*
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+/*}*/
+
+
+  
+  </style>  
+
+</head>
+<body>
+        <div class="generic-container" >
+          <div class="panel panel-default">
+            <div class="panel-heading" style="padding: 8px 15px;" align="center"><span style="font-size:20px"><p>Sistema Único de Logueo</p></span></div>
+            <div class="formcontainer">
+				  <div class="panel panel-default">
+					<div class="formcontainer">
+						<form name="form" >
+						
+					        <div class="row">
+								<div class="form-group ">
+									<div style="clear:both;margin-bottom:2px"></div>
+									<label class="col-xs-12 col-sm-2 col-md-2 control-lable" for="nombre">Usuario</label>
+									<div class="col-xs-12 col-sm-10 col-md-10">
+										<input type="text" id="username" class="form-control input-sm" required name="username" placeholder="username" required >										
+									</div>
+								</div>
+							</div>
+					        <div class="row">
+								<div class="form-group ">
+									<div style="clear:both;margin-bottom:2px"></div>
+									<label class="col-xs-12 col-sm-2 col-md-2 control-lable" for="nombre">Password</label>
+									<div class="col-xs-12 col-sm-10 col-md-10">
+										<input type="password" id="password" class="form-control input-sm" required placeholder="" required >										
+									</div>
+								</div>
+							</div>								
+							<div class="row" >
+								<div class="col-xs-12 col-sm-12 col-md-12" style="">
+									<div class="form-actions floatRight">
+										<button class="btn btn-primary btn-sm"  >Login</button>									
+										
+									</div>
+									
+								</div>
+							</div>
+     						<div style="clear:both"></div>
+						</form>
+					  </div>
+				  </div>
+              </div>
+          </div>
+      </div>
+
+</body>
+</html>

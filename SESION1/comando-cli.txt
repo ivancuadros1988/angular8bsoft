@@ -1,0 +1,63 @@
+Login
+
+Modulo
+v07
+ng generate module Login generates an NgModule --routing
+v08
+ng g m Login --routing
+
+Componente
+v07
+ng generate component Login --modules LoginModule
+v08
+ng g c Login --module Login
+
+ESTRUCTURA
+
+v08
+ng g m Estructura --routing
+ng g c Estructura --module Estructura
+
+menu
+ng g c estructura/Menu --module Estructura
+footer
+ng g c estructura/Footer --module Estructura
+
+INICIO
+v08
+ng g m Inicio --routing
+ng g c Inicio --module Inicio
+
+REGISTRO
+v08
+ng g m Registro --routing
+ng g c Registro --module Registro
+
+
+SERVICE
+ng generate service login/Login
+
+ng g s registro/Servicio
+
+
+ng g s seguridad/AutenticacionGuard
+
+
+
+Consideraciones
+-----------------------------------
+
+- Cuando al nombre tenga dos frases
+
+ng g m MenuLado --routing
+ng g c MenuLado --module menu-lado/menu-lado.module.ts
+
+
+
+
+
+
+
+
+
+

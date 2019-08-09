@@ -1,0 +1,1 @@
+https://linuxconfig.org/how-to-install-postgres-on-redhat-8

@@ -1,0 +1,49 @@
+<div class="generic-container" >
+    <div class="panel panel-default">
+      <div class="panel-heading" style="padding: 8px 15px;" align="center"><span style="font-size:20px"><p>Sistema Único de Logueo</p></span></div>
+      <div class="formcontainer">
+            <div class="panel panel-default">
+              <div class="formcontainer">
+                  <form name="form" >
+                  
+                      <div class="row">
+                          <div class="form-group ">
+                              <div style="clear:both;margin-bottom:2px"></div>
+                              <label class="col-xs-12 col-sm-2 col-md-2 control-lable" for="nombre">Usuario</label>
+                              <div class="col-xs-12 col-sm-10 col-md-10">
+                                  <input type="text" id="username" class="form-control input-sm" required name="username" placeholder="username" required [(ngModel)]="usuario.username">										
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="form-group ">
+                              <div style="clear:both;margin-bottom:2px"></div>
+                              <label class="col-xs-12 col-sm-2 col-md-2 control-lable" for="nombre">Password</label>
+                              <div class="col-xs-12 col-sm-10 col-md-10">
+                                  <input type="password" id="password" name="password" class="form-control input-sm" required placeholder="" required [(ngModel)]="usuario.password">										
+                              </div>
+                          </div>
+                      </div>								
+                      <div class="row" >
+                          <div class="col-xs-12 col-sm-12 col-md-12" style="">
+                              <div class="form-actions floatRight">
+                                  <button class="btn btn-primary btn-sm" (click)="login()" >Login</button>									
+                                  
+                              </div>
+                              
+                          </div>
+                      </div>
+                      <div class="row" >
+                           <div class="col-xs-12 col-sm-12 col-md-12" style=""> 
+                                <div *ngIf="errorMessage" class="alert alert-danger"> {{ errorMessage }}
+
+                                </div> 
+                            </div> 
+                        </div> 
+                        <div style="clear:both"></div>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

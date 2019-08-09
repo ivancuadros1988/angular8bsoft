@@ -1,0 +1,25 @@
+instalando postgres
+------------------------
+yum search postgresql
+yum install postgresql
+yum install postgresql-server
+
+cambiando password postgres
+-----------------------
+sudo passwd postgres
+password: postgres
+
+redhat8-postgres9.x
+---------------------
+
+postgresql-setup initdb
+systemctl enable postgresql.service
+systemctl start postgresql.service
+
+
+port
+------
+netstat -lp --protocol=unix | grep postgres
+
+
+https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.0/html/installation_guide/appe-preparing_a_remote_postgresql_database_for_use_with_the_red_hat_enterprise_virtualization_manager
